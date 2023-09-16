@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Student {
+public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,7 +62,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", address=" + address + ", uname=" + uname + ", pass=" + pass
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", uname=" + uname + ", pass=" + pass
 				+ "]";
 	}
 	

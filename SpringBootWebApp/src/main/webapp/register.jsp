@@ -9,7 +9,7 @@
 <body>
 <form action="reg">
   <pre>
-   ID	    :  <input type="text" name="id"><br><br>
+   <input type="hidden" name="id" value="0"><br><br>
    NAME     :  <input type="text" name="name"><br><br>
    ADDRESS  :  <input type="text" name="address"><br><br>
    USERNAME :  <input type="text" name="uname"><br><br>
