@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +28,35 @@ public class UserInfoServiceImpl implements UserInfoService{
 		System.out.println("In Service Layer : " + uname + "  " + pass);
 		UserInfo userInfo = userInfoRepository.findByUnameAndPass(uname, pass);
 		return userInfo;
+	}
+
+
+	@Override
+	public List<UserInfo> getAllData() {
+		// TODO Auto-generated method stub
+		List<UserInfo> ulist = (List<UserInfo>)userInfoRepository.findAll();
+		return ulist;
+	}
+
+
+	@Override
+	public UserInfo getEditData(int id) {
+		// TODO Auto-generated method stub
+		UserInfo userInfo = userInfoRepository.findById(id).get();
+		return userInfo;
+	}
+
+
+	@Override
+	public void updateUserInfo(UserInfo userInfo) {
+		// TODO Auto-generated method stub
+		userInfoRepository.save(userInfo);
+	}
+
+
+	@Override
+	public void deleteData(int id) {
+		// TODO Auto-generated method stub
+		userInfoRepository.deleteById(id);
 	}
 }
